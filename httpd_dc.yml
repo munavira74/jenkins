@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  ubuntu:
+    image: img2
+    container_name: c2
+    ports:
+    - "8764:80"
+    volumes:
+    - vol1:/data
+    networks:
+    - net1
+
+volumes:
+  vol1:
+networks:
+  net1:
+    driver: bridge
+
