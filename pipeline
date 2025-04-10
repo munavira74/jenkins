@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('git_connection') {
+            steps {
+                git url: 'https://munavira74:<token>@github.com/munavira74/jenkins.git', branch: 'main'
+            }
+    }
+    stage('copying') {
+        steps {
+            sh 'echo "asd123." | sudo -S cp -r oxer-html /var/www/html'
+        }
+    }
+    stage('restarting') {   
+        steps {
+            sh 'echo "asd123." | sudo -S systemctl restart apache2' 
+        }
+    }
+}
+}
