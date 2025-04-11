@@ -4,7 +4,7 @@ services:
     image: img1
     container_name: c1
     ports: 
-    - "8765:80"
+    - "8763:80"
     volumes:
     - vol1:/data
     networks:
