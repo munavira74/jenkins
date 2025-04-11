@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 RUN apt update && apt install nginx -y
-COPY ./dogcare /usr/share/nginx/html
+COPY ./steller /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
